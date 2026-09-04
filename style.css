@@ -1531,6 +1531,8 @@ h1 {
 
 .contact-arrow {
     font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-variant-emoji: text;
 }
 
 
@@ -1548,6 +1550,7 @@ h1 {
     font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 600;
+    font-variant-emoji: text;
 
     color: #252525;
     text-decoration: none;
@@ -1668,9 +1671,6 @@ header {
     justify-content: flex-end;
 }
 
-.contact {
-    padding: 80px 5%;
-}
 
 .contact-content {
     padding: 50px 25px;
@@ -2079,7 +2079,7 @@ h1 {
 .contact-content .contact-link:hover {
 
     gap:
-        25px;
+        8px;
 }
 
 .contact-details {

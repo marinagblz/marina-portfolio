@@ -215,6 +215,13 @@ mobileMenuButton.addEventListener("click", () => {
     mobileMenuButton.classList.toggle("active");
 });
 
+// Cerrar el menú al seleccionar una sección
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        mobileMenuButton.classList.remove("active");
+    });
+});
 
 
 // Recuperar idioma guardado
