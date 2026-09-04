@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Cancellation Prediction | Marina Gallego</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="case-study">
+
+    <div class="case-header">
+        <a class="case-back" href="index.html#projects">
+            <span data-i18n="case-back">← Back to projects</span>
+        </a>
+
+        <p>Marina Gallego</p>
+    </div>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="case-hero case-hero-cancellation">
+            
+            <div class="case-hero-content">
+
+                <p class="case-label" data-i18n="cancellation-label">
+                    Project 02 · Machine learning
+                </p>
+
+                <h1>
+                    <span data-i18n="cancellation-title">
+                        Hotel Cancellation<br>Prediction
+                    </span>
+                </h1>
+
+                <p class="case-lead" data-i18n="cancellation-lead">
+                      Predicting hotel booking cancellations before they happen, using data available at the time of reservation reaching 87% accuracy.
+                </p>
+
+            </div>
+
+
+            <div class="case-image-wrap case-image-wrap-cancellation">
+
+                <img
+                    src="images/confusion_matrix.webp"
+                    alt="Hotel Cancellation Prediction project preview"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="case-section case-overview reveal">
+
+            <div class="case-section-heading">
+
+                <p class="case-label" data-i18n="cancellation-overview-label">
+                    Overview
+                </p>
+
+                <h2 data-i18n="cancellation-overview-title">
+                    Can you predict a cancellation before it happens?
+                </h2>
+
+            </div>
+
+
+            <div class="case-copy">
+
+                <p data-i18n="cancellation-overview-text-1">
+                    This project explores hotel booking data to understand
+                    the factors associated with cancellations and build a
+                    model capable of predicting them.
+                </p>
+
+                <p data-i18n="cancellation-overview-text-2">
+                    The analysis involved preparing the dataset, exploring booking patterns, and comparing different models to find the one that predicted cancellations most accurately. (Logistic Regression vs. Random Forest)
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOOLKIT -->
+
+        <section class="case-section case-tools reveal">
+
+            <div class="case-section-heading">
+
+                <p class="case-label" data-i18n="cancellation-toolkit-label">
+                    Toolkit
+                </p>
+
+                <h2 data-i18n="cancellation-toolkit-title">
+                    Tools used along the way.
+                </h2>
+
+            </div>
+
+
+            <div class="tools-grid">
+
+                <div class="tool" style="--delay: 0ms">
+                    Python
+                </div>
+
+                <div class="tool" style="--delay: 120ms">
+                    Pandas
+                </div>
+
+                <div class="tool" style="--delay: 240ms">
+                    Scikit-learn
+                </div>
+
+                <div class="tool" style="--delay: 360ms">
+                    Matplotlib
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        const revealItems = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add('visible');
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.2
+        });
+
+
+        revealItems.forEach((item) => observer.observe(item));
+
+    </script>
+    <script src="language.js"></script>
+
+</body>
+
+</html>

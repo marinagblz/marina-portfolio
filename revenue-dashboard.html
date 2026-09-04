@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Revenue Dashboard | Marina Gallego</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="case-study">
+    <div class="case-header">
+        <a class="case-back" href="index.html#projects">
+            <span data-i18n="case-back">← Back to projects</span>
+        </a>
+        <p>Marina Gallego</p>
+    </div>
+
+    <main>
+        <section class="case-hero">
+            <div class="case-hero-content">
+                <p class="case-label" data-i18n="revenue-label">Project 01 · Data analysis</p>
+                <h1>
+                    <span data-i18n="revenue-title">
+                        Hotel Revenue<br>Dashboard
+                    </span>
+                </h1>
+                <p class="case-lead" data-i18n="revenue-lead">
+                    A data cleaning and exploratory analysis project based on a fictional hotel reservation dataset, with a focus on Revenue Management and hotel performance indicators.
+                </p>
+            </div>
+            <div class="case-image-wrap">
+                <img src="images/power_bi_dashboard.webp" alt="Hotel Revenue Dashboard preview">
+            </div>
+        </section>
+
+        <section class="case-section case-overview reveal">
+            <div class="case-section-heading">
+                <p class="case-label" data-i18n="revenue-overview-label">
+                    Overview
+                </p>
+                <h2 data-i18n="revenue-overview-title">
+                    From messy data to revenue insights
+                </h2>
+            </div>
+            <div class="case-copy">
+                <p data-i18n="revenue-overview-text-1">
+                    The project simulates the workflow of a Revenue Management Analyst: starting with a deliberately messy dataset, cleaning and validating the data, analysing booking and demand patterns, and presenting the results through Python and Power BI.
+                </p>
+                <p data-i18n="revenue-overview-text-2">
+                    The objective of this project is to explore how hotel performance and booking behaviour change throughout the year and across different demand segments. The analysis focuses on: seasonality and hotel performance, Occupancy, ADR and RevPAR, booking lead time, length of stay, market segments, distribution channels, events and their relationship with ADR, cancellation patterns
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section case-tools reveal">
+            <div class="case-section-heading">
+                <p class="case-label" data-i18n="revenue-toolkit-label">
+                    Toolkit
+                </p>
+                <h2 data-i18n="revenue-toolkit-title">
+                    Tools used along the way.
+                </h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool" style="--delay: 0ms">Python</div>
+                <div class="tool" style="--delay: 120ms">Pandas</div>
+                <div class="tool" style="--delay: 240ms">Matplotlib</div>
+                <div class="tool" style="--delay: 360ms">Power BI</div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const revealItems = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        revealItems.forEach((item) => observer.observe(item));
+    </script>
+    <script src="language.js"></script>
+</body>
+</html>
