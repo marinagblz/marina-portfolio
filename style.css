@@ -1736,9 +1736,14 @@ header {
 
     min-height:
         100svh;
+    min-height: 100dvh;
 
     padding:
         100px 6% 40px;
+    
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-name {
@@ -1776,24 +1781,29 @@ h1 {
 
 .hero-buttons {
 
+    position: absolute;
     bottom: 25px;
-
+    height: 110px;
     left: 6%;
     right: 6%;
 }
 
 .projects-link {
-
-    bottom: 70px;
-
+    
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 15px;
 
     padding:
         11px 17px;
+    white-space: nowrap;
 }
 
 .hero-buttons .contact-link {
 
+    position: absolute;
     right: 0;
     bottom: 0;
 
@@ -1866,6 +1876,9 @@ h1 {
 
     padding:
         75px 6%;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 
 #projects h2 {
@@ -1926,12 +1939,9 @@ h1 {
 /* EXPERIENCE */
 
 .experience {
-
-    min-height:
-        auto;
-
-    padding:
-        80px 6%;
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding: 70px 6% 80px;
 }
 
 #experience h2 {
@@ -1986,6 +1996,16 @@ h1 {
 
     line-height:
         1.65;
+}
+
+.experience-content {
+    width: 100%;
+    max-width: 100%;
+}
+
+.experience-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 
