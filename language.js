@@ -26,8 +26,8 @@ const translations = {
         "project-02-description": "Predicting hotel booking cancellations with machine learning models.",
         "project-view": "View more",
 
-        "experience-label": "Background",
-        "experience-title": "Experience",
+        "experience-label": "Experience",
+        "experience-title": "Background",
         "experience-01-role": "Waitress",
         "experience-01-description": "Provided buffet service and supported dining room preparation for shift openings. Assisted guests at the pool bar and handling payments.",
         "experience-02-role": "Administrative Assistant",

@@ -178,22 +178,22 @@ transition: transform 0.3s ease;
 
 }
 
-.mobile-menu-button span {
+.mobile-menu-button span:first-child {
 top: 16px;
 }
 
-.mobile-menu-button span {
+.mobile-menu-button span:last-child {
 top: 23px;
 }
 
-.mobile-menu-button.open span {
+.mobile-menu-button.open span:first-child {
 transform:
 translateX(-50%)
 translateY(3.5px)
 rotate(45deg);
 }
 
-.mobile-menu-button.open span {
+.mobile-menu-button.open span:last-child {
 transform:
 translateX(-50%)
 translateY(-3.5px)
@@ -1513,6 +1513,7 @@ h1 {
 .contact-details {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 35px;
 
     margin-top: 35px;
@@ -1530,6 +1531,24 @@ h1 {
     transition: color 0.3s ease;
 }
 
+.linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.linkedin-logo {
+    display: block;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
 .contact-details a:hover {
      color: #293941;
 }
@@ -1543,7 +1562,6 @@ h1 {
     height: 60%;
 
     border-radius: 50%;
-
     filter: blur(40px);
 
     pointer-events: none;
@@ -1662,6 +1680,8 @@ header {
 
 .contact-details a {
     font-size: 14px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .contact-link {
@@ -1871,7 +1891,7 @@ h1 {
 .projects {
 
     min-height:
-        auto;
+        100svh;
 
     padding:
         75px 6%;
@@ -2089,6 +2109,20 @@ h1 {
 
     font-size:
         12px;
+
+    max-width:
+        100%;
+
+    overflow-wrap:
+        anywhere;
+}
+
+.linkedin-logo {
+    width:
+        22px;
+
+    height:
+        22px;
 }
 
 .contact-arrow {
