@@ -1736,7 +1736,6 @@ header {
 
     min-height:
         100svh;
-    min-height: 100dvh;
 
     padding:
         100px 6% 40px;
@@ -1940,8 +1939,8 @@ h1 {
 
 .experience {
     min-height: 100svh;
-    min-height: 100dvh;
     padding: 70px 6% 80px;
+    height: auto;
 }
 
 #experience h2 {
@@ -2071,7 +2070,7 @@ h1 {
 .contact-content .contact-link:hover {
 
     gap:
-        8px;
+        0px;
 }
 
 .contact-details {
@@ -2090,6 +2089,10 @@ h1 {
 
     font-size:
         12px;
+}
+
+.contact-arrow {
+    display: none;
 }
 
 

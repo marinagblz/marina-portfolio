@@ -14,7 +14,7 @@ const translations = {
         "hero-contact": "Let's Talk →",
 
         "about-label": "About me",
-        "about-text-1": "I'm Marina, a Hotel Management student at EHIB in Mallorca. I'm interested in the intersection of hospitality, data, and technology.",
+        "about-text-1": "I'm Marina, a Hotel Management student at EHIB in Mallorca. I'm interested in exploring how data and technology can transform hospitality.",
         "about-text-2": "My experience in hospitality and administration led me to discover that I enjoy analyzing information, solving problems, and improving processes.",
         "about-text-3": "I've explored this interest through different projects in the hotel industry, where I found that I really enjoy working with data and looking at the business from a different perspective.",
 
