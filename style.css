@@ -2036,13 +2036,16 @@ h1 {
 
 .contact-content .contact-link {
 
+    position: static;
+
     font-size:
         14px;
 
-    padding:
-        13px 19px;
-    
-    margin-bottom: 30px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto 40px;
+    font-size: 14px;
+    padding: 13px 19px;
 }
 
 .contact-content .contact-link:hover {
