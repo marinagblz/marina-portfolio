@@ -206,6 +206,14 @@ document.querySelectorAll(".language-button").forEach(button => {
 
 });
 
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load", () => {
+    window.scrollTo(0, 0);
+});
+
 // Menú móvil
 const mobileMenuButton = document.querySelector(".mobile-menu-button");
 const navLinks = document.querySelector(".nav-links");

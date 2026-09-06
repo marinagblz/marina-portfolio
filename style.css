@@ -271,7 +271,6 @@ h1 {
     display: flex;
     background-size: cover;
     background-position: center;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -1094,35 +1093,6 @@ h1 {
     opacity: 0.82;
 }
 
-@media (max-width: 800px) {
-    .about-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .about-image {
-        width: min(320px, 100%);
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card:nth-child(2) {
-        margin-top: 0;
-    }
-
-    .experience-item {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    .nav-links { 
-        display: none; 
-    } 
-    .nav-links.active { 
-        display: flex; 
-    }
-}
 
 /* Revenue Dashboard case study */
 .case-study {
@@ -1836,19 +1806,12 @@ h1 {
 
 /* ABOUT */
 
-#about {
+.about {
+
+    min-height: 100svh;
 
     padding:
         70px 6%;
-}
-
-.about {
-
-    min-height:
-        auto;
-
-    padding:
-        20px 0 70px;
 }
 
 .about-content {
@@ -1857,39 +1820,37 @@ h1 {
 
     align-items: stretch;
 
-    gap: 35px;
+    gap: 25px;
 
-    padding: 30px 24px;
+    padding: 27px 20px;
 
     border-radius: 22px;
 }
 
 #about h2 {
 
-    font-size: 40px;
+    font-size: 36px;
 
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .about-text p {
 
-    font-size: 17px;
+    font-size: 16px;
 
-    line-height: 1.65;
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 .about-image {
 
-    width: 100%;
+    width: 180px;
 
     height:
-        auto;
+        225px;
 
     aspect-ratio:
         4 / 5;
-
-    max-width:
-        320px;
 
     margin:
         0 auto;
@@ -2036,13 +1997,13 @@ h1 {
         100svh;
 
     padding:
-        70px 6%;
+        60px 6%;
 }
 
 .contact-content {
 
     padding:
-        50px 25px;
+        38px 22px;
 
     border-radius:
         22px;
@@ -2051,31 +2012,35 @@ h1 {
 .contact-eyebrow {
 
     font-size:
-        12px;
+        11px;
+    margin-bottom: 12px;
 }
 
 .contact h2 {
 
     font-size:
-        48px;
+        42px;
+    line-height: 1;
+    margin-bottom: 18px;
 }
 
 .contact-intro {
 
     font-size:
-        17px;
-
+        16px;
+    line-height:
+        1.5;
     margin-bottom:
-        30px;
+        25px;
 }
 
 .contact-content .contact-link {
 
     font-size:
-        15px;
+        14px;
 
     padding:
-        15px 21px;
+        13px 19px;
 }
 
 .contact-content .contact-link:hover {
@@ -2090,16 +2055,16 @@ h1 {
         column;
 
     gap:
-        15px;
+        10px;
 
     margin-top:
-        28px;
+        22px;
 }
 
 .contact-details a {
 
     font-size:
-        13px;
+        12px;
 }
 
 
@@ -2336,19 +2301,19 @@ h1 {
 .contact {
 
     padding:
-        60px 5%;
+        45px 5%;
 }
 
 .contact-content {
 
     padding:
-        45px 20px;
+        32px 18px;
 }
 
 .contact h2 {
 
     font-size:
-        43px;
+        40px;
 }
 
 .case-hero {
