@@ -219,14 +219,14 @@ const mobileMenuButton = document.querySelector(".mobile-menu-button");
 const navLinks = document.querySelector(".nav-links");
 
 mobileMenuButton.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+    navLinks.classList.toggle("mobile-open");
     mobileMenuButton.classList.toggle("active");
 });
 
 // Cerrar el menú al seleccionar una sección
 document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
+        navLinks.classList.remove("mobile-open");
         mobileMenuButton.classList.remove("active");
     });
 });
