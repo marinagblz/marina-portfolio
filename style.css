@@ -266,7 +266,9 @@ h1 {
 }
 .hero {
     position: relative;
+    height: 100svh;
     min-height: 100svh;
+    overflow: hidden;
     background-image: url("images/photo.webp");
     display: flex;
     background-size: cover;
@@ -1801,8 +1803,8 @@ h1 {
 .hero-buttons {
 
     position: absolute;
-    bottom: 25px;
-    height: 110px;
+    bottom: 54px;
+    height: 130px;
     left: 6%;
     right: 6%;
 }
@@ -1810,7 +1812,7 @@ h1 {
 .projects-link {
     
     position: absolute;
-    bottom: 55px;
+    bottom: 68px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 15px;
@@ -1824,7 +1826,7 @@ h1 {
 
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 8px;
 
     font-size: 13px;
 

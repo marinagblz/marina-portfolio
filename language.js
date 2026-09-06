@@ -210,9 +210,16 @@ if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
 }
 
-window.addEventListener("load", () => {
+function returnToHomeOnRefresh() {
+    if (window.location.hash) {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+
     window.scrollTo(0, 0);
-});
+}
+
+window.addEventListener("load", returnToHomeOnRefresh);
+window.addEventListener("pageshow", returnToHomeOnRefresh);
 
 // Menú móvil
 const mobileMenuButton = document.querySelector(".mobile-menu-button");
@@ -220,14 +227,14 @@ const navLinks = document.querySelector(".nav-links");
 
 mobileMenuButton.addEventListener("click", () => {
     navLinks.classList.toggle("mobile-open");
-    mobileMenuButton.classList.toggle("active");
+    mobileMenuButton.classList.toggle("open");
 });
 
 // Cerrar el menú al seleccionar una sección
 document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("mobile-open");
-        mobileMenuButton.classList.remove("active");
+        mobileMenuButton.classList.remove("open");
     });
 });
 
