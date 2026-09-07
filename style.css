@@ -270,9 +270,10 @@ h1 {
     min-height: 100svh;
     overflow: hidden;
     background-image: url("images/photo.webp");
+    background-repeat: no-repeat;
     display: flex;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     justify-content: center;
     align-items: center;
 }
@@ -1772,8 +1773,9 @@ header {
         100px 6% 40px;
     
     background-attachment: scroll;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
 }
 
 .hero-name {
