@@ -1756,8 +1756,17 @@ header {
 
 .hero {
 
+    height:
+        100vh;
+
+    height:
+        100dvh;
+
     min-height:
-        100svh;
+        100vh;
+
+    min-height:
+        100dvh;
 
     padding:
         100px 6% 40px;
@@ -1960,7 +1969,8 @@ h1 {
 /* EXPERIENCE */
 
 .experience {
-    min-height: 100svh;
+    min-height: 100vh;
+    min-height: 100dvh;
     padding: 70px 6% 80px;
     height: auto;
 }
