@@ -210,21 +210,6 @@ if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
 }
 
-function setViewportHeight() {
-    const viewportHeight = window.visualViewport
-        ? window.visualViewport.height
-        : window.innerHeight;
-
-    document.documentElement.style.setProperty(
-        "--viewport-height",
-        `${viewportHeight}px`
-    );
-}
-
-setViewportHeight();
-window.addEventListener("resize", setViewportHeight);
-window.visualViewport?.addEventListener("resize", setViewportHeight);
-
 function returnToHomeOnRefresh() {
     if (window.location.hash) {
         history.replaceState(null, "", window.location.pathname + window.location.search);

@@ -1757,17 +1757,8 @@ header {
 
 .hero {
 
-    height:
-        var(--viewport-height, 100vh);
-
-    height:
-        var(--viewport-height, 100dvh);
-
-    min-height:
-        var(--viewport-height, 100vh);
-
-    min-height:
-        var(--viewport-height, 100dvh);
+    height: 100svh;
+    min-height: 100svh;
 
     padding:
         100px 6% 40px;
@@ -1775,7 +1766,7 @@ header {
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center bottom;
 }
 
 .hero-name {
@@ -1971,8 +1962,7 @@ h1 {
 /* EXPERIENCE */
 
 .experience {
-    min-height: var(--viewport-height, 100vh);
-    min-height: var(--viewport-height, 100dvh);
+    min-height: 100svh;
     padding: 70px 6% 80px;
     height: auto;
 }
