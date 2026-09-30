@@ -2452,12 +2452,12 @@ REDUCED MOTION
             min-height: calc(100lvh + var(--safari-toolbar-cover));
         }
 
-        .hero-text {
+        .hero-intro {
             transform: translateY(calc(var(--safari-toolbar-cover) / -2));
         }
 
         .hero-buttons {
-            bottom: calc(20px + var(--safari-toolbar-cover));
+            bottom: calc(70px + var(--safari-toolbar-cover));
         }
     }
 }
