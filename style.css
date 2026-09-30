@@ -2433,17 +2433,63 @@ REDUCED MOTION
 
 }
 
-/* Modern iOS Safari tracks its visible viewport with dvh. The --vh value above
-   remains the fallback for older browsers and during the rotation transition. */
-@supports (height: 100dvh) {
+/* Let the hero continue behind Safari's translucent bottom controls. This keeps
+   the following section from showing through while the controls are expanded. */
+@supports (height: 100lvh) {
     .hero {
-        height: 100dvh;
-        min-height: 100dvh;
+        height: 100lvh;
+        min-height: 100lvh;
     }
 }
 
 /* iPhone landscape is short but often wider than the mobile breakpoint. */
 @media (orientation: landscape) and (max-height: 500px) and (pointer: coarse) {
+    header {
+        padding: 12px 6%;
+    }
+
+    .navbar {
+        justify-content: flex-end;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 14px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        background: rgba(32, 44, 50, 0.90);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        transform: none;
+    }
+
+    .nav-links.mobile-open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 9px 10px;
+        font-size: 16px;
+        color: #ffffff;
+    }
+
+    .language-switcher {
+        margin-left: 15px;
+        margin-right: 12px;
+        transform: none;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
     .hero {
         padding: 72px max(6%, env(safe-area-inset-right)) 24px max(6%, env(safe-area-inset-left));
         background-position: center center;
