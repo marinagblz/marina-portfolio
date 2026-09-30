@@ -271,7 +271,7 @@ h1 {
     min-height: 100vh;
     min-height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
-    background-image: url("images/photo.webp");
+    background-image: url("images/photo.jpg");
     background-repeat: no-repeat;
     display: flex;
     background-size: cover;
@@ -2439,6 +2439,26 @@ REDUCED MOTION
     .hero {
         height: 100lvh;
         min-height: 100lvh;
+    }
+}
+
+/* On iOS the browser toolbar floats over the page. Keep the hero background
+   beneath the whole toolbar, while preserving the visual position of its UI. */
+@media (orientation: portrait) and (pointer: coarse) {
+    @supports (height: 100lvh) {
+        .hero {
+            --safari-toolbar-cover: 220px;
+            height: calc(100lvh + var(--safari-toolbar-cover));
+            min-height: calc(100lvh + var(--safari-toolbar-cover));
+        }
+
+        .hero-text {
+            transform: translateY(calc(var(--safari-toolbar-cover) / -2));
+        }
+
+        .hero-buttons {
+            bottom: calc(20px + var(--safari-toolbar-cover));
+        }
     }
 }
 
