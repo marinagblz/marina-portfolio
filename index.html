@@ -175,7 +175,6 @@
 
         <a href="mailto:gallego.blazquez.m@gmail.com" class="contact-link">
             <span data-i18n="contact-email">Send me an email</span>
-            <span class="contact-arrow">↗</span>
         </a>
 
         <div class="contact-details">
@@ -221,15 +220,25 @@ window.addEventListener("scroll", function () {
 });
 </script>
 <script>
-function setVH() {
-    const height = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-    const vh = height * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+function setViewportHeight() {
+    const viewport = window.visualViewport;
+    const height = viewport ? viewport.height : window.innerHeight;
+    document.documentElement.style.setProperty('--vh', `${height * 0.01}px`);
 }
-setVH();
-window.addEventListener('resize', setVH);
+
+function refreshViewportHeight() {
+    // Safari updates visualViewport just after rotating the device.
+    requestAnimationFrame(() => {
+        setViewportHeight();
+        setTimeout(setViewportHeight, 150);
+    });
+}
+
+setViewportHeight();
+window.addEventListener('resize', refreshViewportHeight, { passive: true });
+window.addEventListener('orientationchange', refreshViewportHeight, { passive: true });
 if (window.visualViewport) {
-    window.visualViewport.addEventListener('resize', setVH);
+    window.visualViewport.addEventListener('resize', refreshViewportHeight, { passive: true });
 }
 </script>
 <script src="language.js"></script>

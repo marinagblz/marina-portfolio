@@ -2432,3 +2432,54 @@ REDUCED MOTION
 }
 
 }
+
+/* Modern iOS Safari tracks its visible viewport with dvh. The --vh value above
+   remains the fallback for older browsers and during the rotation transition. */
+@supports (height: 100dvh) {
+    .hero {
+        height: 100dvh;
+        min-height: 100dvh;
+    }
+}
+
+/* iPhone landscape is short but often wider than the mobile breakpoint. */
+@media (orientation: landscape) and (max-height: 500px) and (pointer: coarse) {
+    .hero {
+        padding: 72px max(6%, env(safe-area-inset-right)) 24px max(6%, env(safe-area-inset-left));
+        background-position: center center;
+    }
+
+    .hero-name {
+        top: max(12px, env(safe-area-inset-top));
+    }
+
+    .hero-location {
+        top: max(34px, calc(env(safe-area-inset-top) + 22px));
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 5vw, 44px);
+        padding-bottom: 12px;
+    }
+
+    .hero-role {
+        max-width: 540px;
+        font-size: 15px;
+        line-height: 1.25;
+    }
+
+    .hero-buttons {
+        bottom: max(14px, env(safe-area-inset-bottom));
+        height: 58px;
+        left: max(6%, env(safe-area-inset-left));
+        right: max(6%, env(safe-area-inset-right));
+    }
+
+    .projects-link {
+        bottom: 0;
+    }
+
+    .hero-buttons .contact-link {
+        bottom: 0;
+    }
+}
